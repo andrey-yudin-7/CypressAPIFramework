@@ -24,13 +24,13 @@
 
 This is a Cypress Javascript based project for API test automation built using Data Driven concepts for API resources and Data payload for requests in JSON format from external resources with generating reports with updating configs for recording results in Cypress dashboard.
 
-At the moment, the added API tests (as an example) have been directed to verify basic API calls (POST, GET, PUT, DELETE) using cy.request() with the test for verifying E2E scenario from the user creation, data updating till user deletion ([_userE2EChainTest.js_](\cypress\integration\APITests\userE2EChainTest.js)). 
+At the moment, the added API tests (as an example) have been directed to verify basic API calls (POST, GET, PUT, DELETE) using cy.request() with the test for verifying E2E scenario from the user creation, data updating till user deletion ([_userE2EChainTest.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/cypress/integration/APITests/userE2EChainTest.js)). 
 
-Also added the test for using Cypress interception (cy.intercept() intercepts requests at the network layer) to intercept, stub, spy and mock an API call ([_Apiintercept.js_](\cypress\integration\Interception\Apiintercept.js))
+Also added the test for using Cypress interception (cy.intercept() intercepts requests at the network layer) to intercept, stub, spy and mock an API call ([_Apiintercept.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/cypress/integration/Interception/Apiintercept.js))
 
 This project uses the following free REST APIs root resources:
 https://gorest.co.in (for _PostUser.js, GetUser.js, PutUser.js, DeleteUser.js, userE2EChainTest.js_)
-https://rapidapi.com/apishub/api/yahoo-weather5 (for [_WeatherAPI.js_](\cypress\integration\APITests\WeatherAPI.js))
+https://rapidapi.com/apishub/api/yahoo-weather5 (for [_WeatherAPI.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/cypress/integration/APITests/WeatherAPI.js))
 https://jsonplaceholder.typicode.com (for interception _Apiintercept.js_)
 
 Project Structure:
