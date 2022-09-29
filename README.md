@@ -71,7 +71,7 @@ For Example in ([_userE2EChainTest.js_](https://github.com/andrey-yudin-7/Cypres
 
 Basic information about Cypress interception available [here](https://docs.cypress.io/api/commands/intercept)
 
-For demonstration purposes I created _Apiintercept.js_ with the main end point https://jsonplaceholder.typicode.com/posts from free APIs available at https://jsonplaceholder.typicode.com/
+To test interception created [_Apiintercept.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/blob/master/cypress/integration/Interception/Apiintercept.js) test with the main end point https://jsonplaceholder.typicode.com/posts from free APIs available at https://jsonplaceholder.typicode.com/
 
 where we are calling posts:
 
@@ -81,7 +81,7 @@ with the following response:
 
 <img src="cypress/support/readmeImages/interception2.png">
 
-To generate our own response so we can mock it up we are using cy.intercept() method with the path: '/posts', after clicking on element with the /posts href we'll spy on that call using cy.wait, after that we can work on verifying the response.
+To generate our own response so we can mock it up we are using cy.intercept() method with the path: '/posts', after clicking on element with the /posts href we'll spy on that call using cy.wait(), after that we can work on the response verification.
 
 To create a mock we need to return a static response as { totalpost: 5, name: 'mockup' } through intercept method:
 
