@@ -26,7 +26,7 @@ This is a Cypress Javascript based project for API test automation built using D
 
 At the moment, the added API tests (as an example) have been directed to verify basic API calls (POST, GET, PUT, DELETE) using cy.request() with the test for verifying E2E scenario from the user creation, data updating till user deletion ([_userE2EChainTest.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/blob/master/cypress/integration/APITests/userE2EChainTest.js)). 
 
-Also added the test for using Cypress interception (cy.intercept() intercepts requests at the network layer) to intercept, stub, spy and mock an API call ([_Apiintercept.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/blob/master/cypress/integration/Interception/Apiintercept.js))
+Also added the test for using Cypress interception (cy.intercept() intercepts requests at the network layer) to intercept, stub, spy or mock an API call ([_Apiintercept.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/blob/master/cypress/integration/Interception/Apiintercept.js))
 
 This project uses the following free REST APIs root resources:
 https://gorest.co.in (for _PostUser.js, GetUser.js, PutUser.js, DeleteUser.js, userE2EChainTest.js_)
@@ -46,14 +46,23 @@ Project Structure:
 
 ### __2.1 Making an HTTP request (cy.request()) for API test with testing response data__ 
 
+Basic information about Http request in Cypress with all supported methods available [here](https://docs.cypress.io/api/commands/request)
+
+In this project in APITests folder created API tests using basic http requests as POST, GET, PUT, DELETE with Request Chaining.
+
+<img src="cypress/support/readmeImages/request.png">
+
+For Example in ([_userE2EChainTest.js_](https://github.com/andrey-yudin-7/CypressAPIFramework/blob/master/cypress/integration/APITests/userE2EChainTest.js)) test is passing through following steps: 
 
 
+1. User created (with POST method) using data from payload with the response status and body verification.
+2. Get created user (with GET method) with the response status and body verification that user's data are from payload.
+3. User data updated (with PUT method) with the response status and body verification.
+4. Get updated user (with GET method) and verify with the response status that the user now with the updated data.
+5. Delete user (with DELETE method) with the response status verification
+6. Verify user deleted (with GET method) successfully with the response status and body verification.
 
-
-
-
-
-
+<img src="cypress/support/readmeImages/request1.png">
 
 
 <a id="interception"></a>
@@ -164,3 +173,6 @@ Right-click on the mochawesome.html report, select the Copy Path option, and ope
 <a id="dashboard"></a>
 
  ### __2.7 Cypress Dashboard__ -->
+
+
+ <!-- Parallelize your tests in CI and visualize every error by watching full video recordings of each test you run. -->
